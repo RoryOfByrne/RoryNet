@@ -131,4 +131,4 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
-STATIC_ROOT = '/static/'
+STATIC_ROOT = '/home/rorybyrne/webapps/rorynet/rorynet/src/rorynet_site/static/'
