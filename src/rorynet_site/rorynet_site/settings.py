@@ -26,7 +26,8 @@ SECRET_KEY = 'lxah1x9ydsrv^aczip-sf++(1c_k($=^bk0=-x+b01b==od6i7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.rorybyrne.me",
+                 "rorybyrne.me"]
 
 
 # Application definition
