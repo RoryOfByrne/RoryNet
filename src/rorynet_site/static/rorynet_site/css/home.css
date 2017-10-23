@@ -17,6 +17,14 @@ body, h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+a {
+    color: #fc4b4b;
+}
+
+a:hover {
+    color: #962b2b;
+}
+
 .btn-secondary {
   background-color: #fc4b4b;
   border-color: #000000
@@ -33,10 +41,6 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .nav-link {
   color: #fc4b4b
-}
-
-.red-link:hover {
-  color: #962b2b
 }
 
 .navbar-brand {
