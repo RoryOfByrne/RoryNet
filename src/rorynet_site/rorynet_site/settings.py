@@ -131,4 +131,4 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
-STATIC_ROOT = ''
+STATIC_ROOT = '/static/'
