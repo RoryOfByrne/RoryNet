@@ -12,6 +12,7 @@ class Project(models.Model):
         null=True)
     source_code_link = models.CharField(max_length=200)
     id_string = models.CharField(max_length=50)
+    picture = models.CharField(max_length=50, default="trump.jpg")
 
     def publish(self):
         self.published_date = datetime.now
