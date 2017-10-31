@@ -2,3 +2,5 @@
 venv/
 src/rorynet_site/db*
 *pycache*
+src/rorynet_site/rorynet_site/settings_prod.py
+.gitignore
