@@ -28,7 +28,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 
-ALLOWED_HOSTS = ['www.rorybyrne.me', 'rorybyrne.me']
+ALLOWED_HOSTS = ['www.rorybyrne.me', 'rorybyrne.me', '127.0.0.1']
 
 
 # Application definition
