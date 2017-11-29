@@ -7,5 +7,7 @@ class HomePageView(TemplateView):
         return render(request, 'index.html')
 
 class AboutPageView(TemplateView):
-    # A different way of doing it
     template_name = "about.html"
+
+class ContactPageView(TemplateView):
+    template_name = "contact.html"
