@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="container blog-posts-container">
+
+      <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+          <h1 class="my-4">My Blog
+          </h1>
+
+          {% if blog_posts %}
+            {% for post in blog_posts %}
+              <!-- Blog Post -->
+              <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <div class="card-body">
+                  <h2 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                  <p class="card-text">{{ post.description }}</p>
+                  <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                  Posted on {{ post.published_date }} by {{ post.author }}
+                </div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p>There are no blog posts (yet!)</p>
+          {% endif %}
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          <!-- Categories Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Categories</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  {% if categories %}
+                    {% for category in categories %}
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+                        </li>
+                      </ul>
+                    {% endfor %}
+                  {% else %}
+                    <p>There are no Categories</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
