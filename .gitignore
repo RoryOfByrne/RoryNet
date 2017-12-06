@@ -6,3 +6,5 @@ src/rorynet_site/rorynet_site/settings_prod.py
 .gitignore
 
 src/rorynet_site/*/migrations
+
+src/rorynet_site/media
