@@ -25,10 +25,8 @@ SECRET_KEY = 'PLACEHOLDER'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TEMPLATE_DEBUG = True
 
-
-ALLOWED_HOSTS = ['www.rorybyrne.me', 'rorybyrne.me']
+ALLOWED_HOSTS = ['www.rorybyrne.me', 'rorybyrne.me', '127.0.0.1']
 
 
 # Application definition
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'projects',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +77,7 @@ WSGI_APPLICATION = 'rorynet_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+DATABASES = { # TODO: Use MySQL for testing
     'default' : {
 	'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
