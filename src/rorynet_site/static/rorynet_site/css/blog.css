@@ -1,3 +1,7 @@
 .blog-posts-container {
     padding-top: 50px;
 }
+
+#blog-body {
+    font-weight: 300;
+}

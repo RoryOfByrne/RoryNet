@@ -13,8 +13,6 @@ class Blog(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
 
-    image = models.ImageField(upload_to='static/img/blog_posts', default='media/static/img/blog_posts/default.png')
-
     category = models.ForeignKey('blog.Category')
 
     def publish(self):

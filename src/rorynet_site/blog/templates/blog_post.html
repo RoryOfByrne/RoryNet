@@ -21,13 +21,11 @@
 
           <hr>
 
-          <!-- Preview Image -->
-          <img class="img-fluid rounded" src="{{ blog_post.image.url }}" alt="">
-
           <hr>
 
-          {{ blog_post.body }}
-
+	<div id="blog-body">
+          {{ blog_post.body|linebreaks }}
+	</div>
 
           <hr>
         </div>

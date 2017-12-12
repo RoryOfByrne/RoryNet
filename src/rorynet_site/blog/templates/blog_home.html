@@ -12,7 +12,6 @@
             {% for post in blog_posts %}
               <!-- Blog Post -->
               <div class="card mb-4">
-                <img class="card-img-top" src="{{ post.image.url }}" alt="">
                 <div class="card-body">
                   <h2 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
                   <p class="card-text">{{ post.description }}</p>
