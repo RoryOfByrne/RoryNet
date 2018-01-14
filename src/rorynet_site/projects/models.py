@@ -1,8 +1,9 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
 class Project(models.Model):
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="projects")
     title = models.CharField(max_length=200)
     description = models.TextField()
     created_date = models.DateTimeField(
