@@ -2,13 +2,14 @@ from django.db import models
 from django.db.models import permalink
 from django.utils import timezone
 
+from tinymce.models import HTMLField
 
 class Blog(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     description = models.TextField()
-    body = models.TextField()
+    body = HTMLField()
 
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)

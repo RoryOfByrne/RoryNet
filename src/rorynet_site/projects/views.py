@@ -5,7 +5,7 @@ from .models import Project
 
 class ProjectOverviewView(TemplateView):
     def get(self, request, **kwargs):
-        projects = Project.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+        projects = Project.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
         return render(request, 'projectsoverview.html', {'projects' : projects})
 
 class ProjectDetailView(TemplateView):

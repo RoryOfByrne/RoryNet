@@ -14,7 +14,7 @@
               <div class="card mb-4">
                 <div class="card-body">
                   <h2 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
-                  <p class="card-text">{{ post.description }}</p>
+                  <p class="card-text">{{ post.description|safe }}</p>
                   <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
                 </div>
                 <div class="card-footer text-muted">

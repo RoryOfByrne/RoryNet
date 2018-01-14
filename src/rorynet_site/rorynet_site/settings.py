@@ -29,6 +29,18 @@ DEBUG = True
 ALLOWED_HOSTS = ['www.rorybyrne.me', 'rorybyrne.me', '127.0.0.1']
 
 
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced", # default value
+    'relative_urls': False, # default value
+    'theme_advanced_toolbar_location' : 'top',
+    'theme_advanced_toolbar_align': 'left',
+    'paste_text_sticky': True,
+    'paste_text_sticky_default' : True,
+    'valid_styles' : 'font-weight,font-style,text-decoration',
+    'width': '80%',
+    'height': 500
+}
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'home',
     'projects',
     'blog',

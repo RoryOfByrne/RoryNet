@@ -23,9 +23,9 @@
 
           <hr>
 
-	<div id="blog-body">
-          {{ blog_post.body|linebreaks }}
-	</div>
+          <div id="blog-body">
+            {{ blog_post.body|safe }}
+          </div>
 
           <hr>
         </div>
